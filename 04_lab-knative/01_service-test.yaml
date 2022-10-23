@@ -4,6 +4,9 @@ metadata:
   name: test 
 spec:
   template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target: "10"
     spec:
       containers:
         - image: docker.io/openshift/hello-openshift 

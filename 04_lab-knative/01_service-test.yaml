@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: test 
+spec:
+  template:
+    spec:
+      containers:
+        - image: docker.io/openshift/hello-openshift 
+          env:
+            - name: RESPONSE 
+              value: "Hello Serverless!"

@@ -1,0 +1,1 @@
+watch oc get vpa --no-headers -o \"custom-columns=:status.recommendation.containerRecommendations[0].target.cpu\"\; oc get po -o \"custom-columns=Name:.metadata.name,Phase:.status.phase,CPU Req:.spec.containers[0].resources.requests.cpu\"\;\ oc get podmetrics

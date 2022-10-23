@@ -13,7 +13,7 @@ spec:
   - type: prometheus
     metadata:
       serverAddress: https://thanos-querier.openshift-monitoring.svc.cluster.local:9092
-      namespace: test                         # replace <NAMESPACE>
+      namespace: demo-keda                         # replace <NAMESPACE>
       metricName: http_requests_total
       threshold: '5'
       query: sum(rate(http_requests_total{job="test-app"}[1m]))

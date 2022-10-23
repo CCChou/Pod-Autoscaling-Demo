@@ -24,6 +24,6 @@ spec:
 
 給定權限
 ```
-oc adm policy add-role-to-user cluster-admin -z thanos
+oc adm policy add-cluster-role-to-user cluster-admin -z thanos
 ```
 - **TODO:** 理論上要給一個合適的權限就好，e.g. metrics read 
